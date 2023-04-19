@@ -15,7 +15,84 @@ Fuente de la página
 }
 
 body {
+  margin: 0;
   font-family: 'Karla', sans-serif;
   background-color: #333;
   color: #fff;
+}
+
+/* 
+CONTAINER:
+- Le di un ancho y una altura al contenedor principal.
+- Lo centre con margenes automaticos.
+*/
+.container{
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CARD-TOP:
+- Le di un ancho del 100%.
+- BGC
+- Le di estilos a cada uno de los textos.
+*/
+.card-top{
+  width: 100%;
+  height: 180px;
+  background-color: #fff;
+}
+
+.title{
+  color: hsl(179, 62%, 43%);
+}
+
+.subtitle-top{
+  color: hsl(71, 73%, 54%); 
+}
+
+.parrafo-top{
+  color: hsl(218, 22%, 67%);
+}
+
+/* CARD-LEFT: 
+- Con display, cambio el elemento a inline-block.
+- Le di una altura
+- Estilos a los textos, bgc y al ancla.
+*/
+.card-left{
+  display: inline-block;
+  height: 220px;
+  background-color:hsl(179, 62%, 55%);
+}
+
+.subtitle{
+  color: #fff;
+}
+
+.number{
+  color: #fff;
+}
+
+.light{
+  color: hsl(204, 43%, 93%);
+}
+
+.parrafo-left{
+  color: #fff;
+}
+
+.anchor{
+  text-decoration: none;
+  background-color: hsl(71, 73%, 54%);
+}
+/* CARD-RIGHT: 
+- Con display, cambio el elemento a inline-block.
+
+*/
+.card-right{
+  display: inline-block;
+  height: 220px;
+  background-color:hsl(179, 62%, 43%);  
 }
