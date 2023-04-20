@@ -25,74 +25,132 @@ body {
 CONTAINER:
 - Le di un ancho y una altura al contenedor principal.
 - Lo centre con margenes automaticos.
+- Font-size:0 -> Para resolver error por no usar flexbox.
 */
 .container{
+  position: relative;
   width: 500px;
-  height: 400px;
+  height: 350px;
   margin-left: auto;
   margin-right: auto;
+  /* font-size: 0; */
 }
 
 /* CARD-TOP:
 - Le di un ancho del 100%.
 - BGC
 - Le di estilos a cada uno de los textos.
+- Padding cero en la vertical y 20px en los horizontales. 
+- Al titulo le di otro padding top de 9px. Pero tengo la duda del porque no funcionada solo dandole el padding top al container. Creo que es por el tema de que los margenes se solapan.
 */
 .card-top{
   width: 100%;
-  height: 180px;
+  height: 150px;
   background-color: #fff;
+  padding: 0 20px;
 }
 
 .title{
   color: hsl(179, 62%, 43%);
+  font-size: 1.7rem;
+  padding-top: 9px;
 }
 
 .subtitle-top{
   color: hsl(71, 73%, 54%); 
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .parrafo-top{
   color: hsl(218, 22%, 67%);
+  font-weight: 200;
+  font-size: .9rem;
 }
 
 /* CARD-LEFT: 
 - Con display, cambio el elemento a inline-block.
-- Le di una altura
+- Le di una altura y ancho.
 - Estilos a los textos, bgc y al ancla.
 */
 .card-left{
-  display: inline-block;
-  height: 220px;
+  position: absolute;
+  width: 50%;
+  height: 200px;
   background-color:hsl(179, 62%, 55%);
+  padding-left: 20px;
 }
 
 .subtitle{
   color: #fff;
+  font-size: 1.1rem;
+  margin: 0;
+  padding-top: 30px;
 }
 
 .number{
   color: #fff;
+  font-size: 1.9rem;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 20px;
 }
 
 .light{
-  color: hsl(204, 43%, 93%);
+  color: #e5eff5;
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .parrafo-left{
   color: #fff;
+  font-size: .8rem;
+  margin: 0;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .anchor{
   text-decoration: none;
   background-color: hsl(71, 73%, 54%);
+  padding: 4px 75px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 5px hsl(0 0% 20% / .3);
+  color: #fff;
+  font-weight: 200;
+  font-size: .85rem;
 }
 /* CARD-RIGHT: 
 - Con display, cambio el elemento a inline-block.
+- Ancho y altura
+- Estilo y ubicacion.
 
 */
 .card-right{
-  display: inline-block;
-  height: 220px;
+  position: absolute;
+  left: 250px;
+  width: 50%;
+  height: 200px;
   background-color:hsl(179, 62%, 43%);  
+  padding-left: 20px;
 }
+
+
+.list{
+  padding-left: 0;
+  list-style: none;
+  font-weight: 200;
+  font-size: .8rem;
+}
+
+/* OJO: El div derecho, no se termina de colocar. */
+
+/* 
+DORIAN:
+- Al contenedor general le dio position relative.
+- Le dio ancho y lo centro con margenes automaticos.
+- A cada contenedor le dio position absolute, para ubicarlos. NO USO DISPLAY: INLINE-BLOCK.
+- Al primer bloque de la tarjeta solo le dio ancho y padding en cada lado, para colocar los elementos. 
+- Uso utility clase, para definir los estilos con mucho menos codigo. Solo debi analizar 
+*/
